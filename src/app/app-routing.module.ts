@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AdminLayoutComponent } from './shared-module/components/admin-layout/admin-layout.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 
 const routes: Routes = [
   {
@@ -14,14 +15,14 @@ const routes: Routes = [
     children: [
       {
         path: 'subscribe',
-        loadChildren: () => import('./home-page/home-page.module').then(mod => mod.HomePageModule),
+        loadChildren: () => import('./views/home-page/home-page.module').then(mod => mod.HomePageModule),
       }
     ]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: false})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
