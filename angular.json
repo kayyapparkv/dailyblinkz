@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dailyBlinkzBootstrap": {
+    "dailyBlinkzBootstrapSCSS": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dailyBlinkzBootstrap",
+            "outputPath": "dist/dailyBlinkzBootstrapSCSS",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +28,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -62,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dailyBlinkzBootstrap:build"
+            "browserTarget": "dailyBlinkzBootstrapSCSS:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dailyBlinkzBootstrap:build:production"
+              "browserTarget": "dailyBlinkzBootstrapSCSS:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dailyBlinkzBootstrap:build"
+            "browserTarget": "dailyBlinkzBootstrapSCSS:build"
           }
         },
         "test": {
@@ -88,7 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -110,21 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "dailyBlinkzBootstrap:serve"
+            "devServerTarget": "dailyBlinkzBootstrapSCSS:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dailyBlinkzBootstrap:serve:production"
+              "devServerTarget": "dailyBlinkzBootstrapSCSS:serve:production"
             }
           }
         }
       }
     }
   },
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "defaultProject": "dailyBlinkzBootstrap"
+  "defaultProject": "dailyBlinkzBootstrapSCSS"
 }
