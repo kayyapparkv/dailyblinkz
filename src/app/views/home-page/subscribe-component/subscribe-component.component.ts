@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-subscribe-component',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscribeComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.toastr.error('', 'Welcome to DailyBlinkz', {timeOut: 3000});
   }
 
 }

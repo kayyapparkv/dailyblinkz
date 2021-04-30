@@ -2,6 +2,8 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import '~ngx-toastr/toastr';
+
 
 .background-primary {
     background: #F4B41A;
