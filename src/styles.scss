@@ -2,3 +2,20 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.background-primary {
+    background: #F4B41A;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+.hover:hover{
+    background: #143D59;
+    color: #F4B41A;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

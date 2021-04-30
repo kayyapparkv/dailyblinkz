@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AdminLayoutComponent } from './components/layouts/admin-layout/admin-layout.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from './components/components.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -10,7 +11,8 @@ import { ComponentsModule } from './components/components.module';
   imports: [
     CommonModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    NgbModule
   ]
 })
 export class SharedModule { }

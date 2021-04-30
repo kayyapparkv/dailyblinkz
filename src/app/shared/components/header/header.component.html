@@ -1,1 +1,46 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-gray background-primary">
+    <div class="col-md-12 col-sm-2 d-flex bd-highlight">
+        <div class="p-2 bd-highlight">
+            <a class="navbar-brand flex-grow-6" [routerLink]="['/']">
+                <img src="../../../../assets/MBEL-Logo.png" width="30px" height="30px" alt="">
+            </a>
+        </div>
+        <div class="p-2 bd-highlight">
+            <h4 class="pt-2 cursor-pointer" [routerLink]="['/']">DailyBlinkz</h4>
+        </div>
+        <div class="ml-auto p-2 bd0light header-part-right my-0">
+            <div ngbDropdown class="user pt-2" display="dynamic" placement="bottom-right">
+                <img class="cursor-pointer" src="./assets/usericon.png" id="userDropdown" ngbDropdownToggle alt="" style="width: 36px; height: 36px;">
+                <div ngbDropdownMenu aria-labelledby="userDropdown">
+                    <div class="dropdown-header hover m-0">
+                        <span>
+                            Developer Login
+                        </span>  
+                    </div>
+                    <div class="dropdown-header hover">
+                        Admin Login
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-md-6 col-sm-0">
+    </div>
+    <div class="col-md-2 col-sm-10 text-right">
+        <div class="header-part-right my-0">
+            <div ngbDropdown class="user">
+                <img src="./assets/usericon.png" id="userDropdown" ngbDropdownToggle alt="" style="width: 36px; height: 36px;">
+                <div ngbDropdownMenu aria-labelledby="userDropdown">
+                    <div class="dropdown-header hover m-0">
+                        <span>
+                            Developer Login
+                        </span>  
+                    </div>
+                    <div class="dropdown-header hover">
+                        Admin Login
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</nav>
