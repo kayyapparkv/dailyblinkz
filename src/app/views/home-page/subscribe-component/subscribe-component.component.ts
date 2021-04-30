@@ -11,7 +11,7 @@ export class SubscribeComponentComponent implements OnInit {
   constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.toastr.error('', 'Welcome to DailyBlinkz', {timeOut: 3000});
+    this.toastr.success('DailyBlinkz', 'Welcome to DailyBlinkz', {timeOut: 3000});
   }
 
 }
